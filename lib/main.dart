@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Plant Store',
       theme: ThemeData(
         scaffoldBackgroundColor: kBackgroundColor,

@@ -15,37 +15,19 @@ final List<Recomanded> recomandedd = [
   Recomanded(
     country: 'Morocco',
     image: 'assets/images/image_1.png',
-    plantName: 'Alwevera',
+    plantName: 'Samantha',
     price: 200,
   ),
   Recomanded(
-    country: 'Morocco',
+    country: 'Paris',
     image: 'assets/images/image_2.png',
-    plantName: 'Alwevera',
+    plantName: 'Angelica',
     price: 200,
   ),
   Recomanded(
-    country: 'Morocco',
+    country: 'China',
     image: 'assets/images/image_3.png',
-    plantName: 'Alwevera',
-    price: 200,
-  ),
-  Recomanded(
-    country: 'Morocco',
-    image: 'assets/images/image_1.png',
-    plantName: 'Alwevera',
-    price: 200,
-  ),
-  Recomanded(
-    country: 'Morocco',
-    image: 'assets/images/image_2.png',
-    plantName: 'Alwevera',
-    price: 200,
-  ),
-  Recomanded(
-    country: 'Morocco',
-    image: 'assets/images/image_3.png',
-    plantName: 'Alwevera',
+    plantName: 'Samantha',
     price: 200,
   ),
 ];

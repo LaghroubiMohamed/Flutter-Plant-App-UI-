@@ -44,8 +44,8 @@ class RecomandedListItems extends StatelessWidget {
               boxShadow: [
                 BoxShadow(
                   offset: Offset(0, 10),
-                  color: kPrimaryColor.withOpacity(0.43),
-                  blurRadius: 40,
+                  color: kPrimaryColor.withOpacity(0.23),
+                  blurRadius: 50,
                 ),
               ],
             ),
