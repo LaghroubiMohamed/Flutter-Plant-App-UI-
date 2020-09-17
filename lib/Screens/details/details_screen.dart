@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/Screens/details/Components/body.dart';
 
 class DetailsScreen extends StatelessWidget {
-  const DetailsScreen({Key key}) : super(key: key);
+  const DetailsScreen(
+      {Key key, this.image, this.country, this.plantName, this.price})
+      : super(key: key);
+  final String image;
+  final String country;
+  final String plantName;
+  final int price;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Container(
-        child: Image.asset('assets/images/image_1.png'),
+    return Scaffold(
+      body: Body(
+        image: image,
+        country: country,
+        plantName: plantName,
+        price: price,
       ),
     );
   }

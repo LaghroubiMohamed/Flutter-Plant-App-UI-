@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/Behaviour.dart';
 import 'package:plant_app/Models/recomanded_model.dart';
+import 'package:plant_app/Screens/details/details_screen.dart';
 import 'package:plant_app/Screens/home/Components/recomanded_list_items.dart';
 import 'package:plant_app/Screens/home/Components/row_with_text_and_botton.dart';
 import 'featured_item.dart';
@@ -29,6 +30,16 @@ class HomeBody extends StatelessWidget {
                 itemCount: recomandedd.length,
                 itemBuilder: (context, index) {
                   return RecomandedListItems(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => DetailsScreen(
+                          image: recomandedd[index].image,
+                          country: recomandedd[index].country,
+                          plantName: recomandedd[index].plantName,
+                          price: recomandedd[index].price,
+                        ),
+                      ));
+                    },
                     size: size,
                     image: recomandedd[index].image,
                     planName: recomandedd[index].plantName,
