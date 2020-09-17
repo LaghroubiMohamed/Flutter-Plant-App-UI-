@@ -3,6 +3,7 @@ import 'package:plant_app/Behaviour.dart';
 import 'package:plant_app/Models/recomanded_model.dart';
 import 'package:plant_app/Screens/home/Components/recomanded_list_items.dart';
 import 'package:plant_app/Screens/home/Components/row_with_text_and_botton.dart';
+import 'featured_item.dart';
 import 'header_with_seach_box.dart';
 
 class HomeBody extends StatelessWidget {
@@ -12,6 +13,7 @@ class HomeBody extends StatelessWidget {
 
     return SingleChildScrollView(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           HeaderWithSearchBox(size: size),
           RowWithTextAndMoreBotton(
@@ -41,25 +43,26 @@ class HomeBody extends StatelessWidget {
             title: "Featured",
             onMoreTapped: () {},
           ),
-          //TODO! add the deatured listView images
-          Container(
-            height: 275,
-            child: ListView.builder(
+          ScrollConfiguration(
+            behavior: NoGlow(),
+            child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              itemCount: recomandedd.length,
-              itemBuilder: (context, index) {
-                return RecomandedListItems(
-                  size: size,
-                  image: recomandedd[index].image,
-                  planName: recomandedd[index].plantName,
-                  country: recomandedd[index].country,
-                  price: recomandedd[index].price,
-                );
-              },
+              child: Row(
+                children: [
+                  FeaturedItems(
+                    size: size,
+                    image: 'assets/images/bottom_img_1.png',
+                    onTap: () {},
+                  ),
+                  FeaturedItems(
+                    size: size,
+                    image: 'assets/images/bottom_img_2.png',
+                    onTap: () {},
+                  ),
+                ],
+              ),
             ),
           ),
-
-          // TODO! creat the bottom navigation bar
         ],
       ),
     );
