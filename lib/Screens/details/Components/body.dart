@@ -29,7 +29,7 @@ class Body extends StatelessWidget {
             children: <Widget>[
               SizedBox(
                 width: size.width / 2,
-                height: 84,
+                height: 64,
                 child: FlatButton(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(

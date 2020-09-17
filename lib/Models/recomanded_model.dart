@@ -26,13 +26,13 @@ final List<Recomanded> recomandedd = [
     country: 'Paris',
     image: 'assets/images/image_2.png',
     plantName: 'Angelica',
-    price: 200,
+    price: 150,
   ),
   Recomanded(
     id: '3',
     country: 'China',
     image: 'assets/images/image_3.png',
     plantName: 'Samantha',
-    price: 200,
+    price: 90,
   ),
 ];
