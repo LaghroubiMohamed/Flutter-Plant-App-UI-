@@ -9,8 +9,9 @@ class Body extends StatelessWidget {
   final String country;
   final String plantName;
   final int price;
+  final String id;
 
-  Body({this.image, this.country, this.plantName, this.price});
+  Body({this.image, this.country, this.plantName, this.price, this.id});
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -18,6 +19,7 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ImageAndIcons(
+            id: id,
             size: size,
             image: image,
           ),

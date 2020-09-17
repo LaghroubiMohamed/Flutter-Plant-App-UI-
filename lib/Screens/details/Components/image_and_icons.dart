@@ -9,10 +9,12 @@ class ImageAndIcons extends StatelessWidget {
     Key key,
     @required this.size,
     this.image,
+    this.id,
   }) : super(key: key);
 
   final Size size;
   final String image;
+  final String id;
 
   @override
   Widget build(BuildContext context) {
@@ -48,24 +50,27 @@ class ImageAndIcons extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              height: size.height * 0.8,
-              width: size.width * 0.75,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(63),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset(0, 10),
-                    blurRadius: 60,
-                    color: kPrimaryColor.withOpacity(0.29),
+            Hero(
+              tag: id,
+              child: Container(
+                height: size.height * 0.8,
+                width: size.width * 0.75,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(63),
                   ),
-                ],
-                image: DecorationImage(
-                  alignment: Alignment.center,
-                  fit: BoxFit.fitHeight,
-                  image: AssetImage(image),
+                  boxShadow: [
+                    BoxShadow(
+                      offset: Offset(0, 10),
+                      blurRadius: 60,
+                      color: kPrimaryColor.withOpacity(0.29),
+                    ),
+                  ],
+                  image: DecorationImage(
+                    alignment: Alignment.center,
+                    fit: BoxFit.fitHeight,
+                    image: AssetImage(image),
+                  ),
                 ),
               ),
             ),

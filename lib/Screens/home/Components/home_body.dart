@@ -33,6 +33,7 @@ class HomeBody extends StatelessWidget {
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => DetailsScreen(
+                          id: recomandedd[index].id,
                           image: recomandedd[index].image,
                           country: recomandedd[index].country,
                           plantName: recomandedd[index].plantName,
@@ -41,6 +42,7 @@ class HomeBody extends StatelessWidget {
                       ));
                     },
                     size: size,
+                    id: recomandedd[index].id,
                     image: recomandedd[index].image,
                     planName: recomandedd[index].plantName,
                     country: recomandedd[index].country,

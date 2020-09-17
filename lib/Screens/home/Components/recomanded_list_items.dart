@@ -11,8 +11,10 @@ class RecomandedListItems extends StatelessWidget {
     this.price,
     this.image,
     this.onTap,
+    this.id,
   }) : super(key: key);
   final Size size;
+  final String id;
   final Function onTap;
   final String planName;
   final String image;
@@ -30,8 +32,11 @@ class RecomandedListItems extends StatelessWidget {
         width: size.width * 0.4,
         child: Column(
           children: [
-            Image.asset(
-              image,
+            Hero(
+              tag: id,
+              child: Image.asset(
+                image,
+              ),
             ),
             Container(
               margin: EdgeInsets.only(
