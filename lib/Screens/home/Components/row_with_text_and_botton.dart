@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/Screens/home/Components/tile_with_custom_under_line.dart';
-
 import '../../../constants.dart';
 
 class RowWithTextAndMoreBotton extends StatelessWidget {
@@ -21,10 +20,13 @@ class RowWithTextAndMoreBotton extends StatelessWidget {
         children: [
           TileWithCustomUnderLine(text: title),
           Spacer(),
-          FlatButton(
+          TextButton(
             onPressed: onMoreTapped,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+            style: TextButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30)),
+              primary: kPrimaryColor,
+            ),
             child: Text(
               'More',
               style: TextStyle(
@@ -32,7 +34,6 @@ class RowWithTextAndMoreBotton extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            color: kPrimaryColor,
           )
         ],
       ),

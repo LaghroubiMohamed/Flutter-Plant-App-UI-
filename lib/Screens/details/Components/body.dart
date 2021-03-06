@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
 import 'image_and_icons.dart';
@@ -30,14 +32,17 @@ class Body extends StatelessWidget {
               SizedBox(
                 width: size.width / 2,
                 height: 64,
-                child: FlatButton(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(20),
-                    ),
-                  ),
-                  color: kPrimaryColor,
-                  onPressed: () {},
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(20),
+                        ),
+                      ),
+                      backgroundColor: kPrimaryColor),
+                  onPressed: () {
+                    print(" i'm Buy Button");
+                  },
                   child: Text(
                     "Buy Now",
                     style: TextStyle(
@@ -48,8 +53,13 @@ class Body extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: FlatButton(
-                  onPressed: () {},
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    primary: Colors.black,
+                  ),
+                  onPressed: () {
+                    print('description');
+                  },
                   child: Text("Description"),
                 ),
               ),
