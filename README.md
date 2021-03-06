@@ -1,8 +1,8 @@
 # plant_app
 
 this app is a plant store UI inspired from 
-"https://www.youtube.com/watch?v=LN668OAUrK4&t=52s"
  "The Flutter Way channel"
+ ## [Watch it on YouTube](https://youtu.be/LN668OAUrK4)
 
 ### The Change We Made :   
 we used models and ListView.builder instead of use a simple list view with children or a SingleChildScrollView
